@@ -6,6 +6,8 @@ import scipy.integrate as integrate
 G = 7  # gravitational constant
 M1 = 1.0  # mass of the first body
 M2 = 1.0  # mass of second body
+R1 = .5*M1 # radius of the first body (proportional to its mass)
+R2 = .5*M2 # radius of the second body (proportional to its mass)
 
 
 def derivs(state, t):
@@ -59,8 +61,8 @@ y2 = y[:, 5]
 fig = plt.figure()
 ax = fig.add_subplot(111, autoscale_on=False, xlim=(-10, 10), ylim=(-10, 10))
 
-body1 = plt.Circle([x1[0], y1[0]], .5, color='r')
-body2 = plt.Circle([x2[0], y2[0]], .5, color='b')
+body1 = plt.Circle([x1[0], y1[0]], R1, color='r')
+body2 = plt.Circle([x2[0], y2[0]], R2, color='b')
 ax.add_patch(body1)
 ax.add_patch(body2)
 time_template = 'Time = {0:.2f}s'
