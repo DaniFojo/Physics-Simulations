@@ -1,6 +1,6 @@
 N = 20; %Number of particles.
 T = 100000; %Number of time increments.
-t = 100; %How many stages we skip after saving the next one
+t = 100; %How many stages we don't save for each one we save
 k = 0.000001; %Elastic constant.
 particles = zeros(N,1);
 
