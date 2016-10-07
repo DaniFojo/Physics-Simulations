@@ -1,7 +1,7 @@
-N = 20; %Number of particles.
-T = 100000; %Number of time increments.
+N = 20; %Number of particles
+T = 100000; %Number of time increments
 t = 100; %How many stages we don't save for each one we save
-k = 0.000001; %Elastic constant.
+k = 0.000001; %Elastic constant
 particles = zeros(N,1);
 
 X = zeros(T/t, N); %positions
